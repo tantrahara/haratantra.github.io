@@ -10,3 +10,27 @@
 section{
     padding-top: 5rem;
 }
+
+.card:hover{
+    transform: translateY(-1.5%);
+    transition: all 0.1s;
+}
+
+/* Animation Scrolls */
+.hidden{
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-100%);
+    transition: all 1s;
+}
+
+.show{
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
+
+.kartu:nth-child(2){
+    transition-delay: 200ms;
+}
+/* /Animation Scrolls */
