@@ -1,0 +1,289 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;700&display=swap");
+
+:root{
+  --bg-1: #232946;
+  --textColor-1: #b8c1ec;
+  --borderColor-1: #121629;
+  --buttonP-1: #eebbc3;
+  --buttonS-1: #fffffe;
+  --buttonT-1: #eebbc3;
+  --hoverButtonP-1: #eea9a1;
+  --hoverButtonS-1: #ffeddc;
+  --hoverButtonT-1: #eea9a1;
+  --searchPlaceH-1: #ffffff;
+  --searchIcon-1: #ffffff;
+  --searchColor-1: #ffffff;
+}
+
+body {
+  background-color: var(--bg-1); /* --Tema */
+  color: var(--textColor-1); /* --Tema */
+  font-family: "Poppins", sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+section {
+  display: grid;
+  min-height: 60vh;
+}
+
+/* --SET SEARCH BAR-- */
+.mySearch-div{
+  background: rgba(255,255,255,0.1);
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+  width: 250px;
+  margin-left: 100px;
+}
+
+.mySearch{
+  border: none;
+  outline: none;  /*Menghilangkan border*/
+  background-color: transparent;
+}
+
+/* warna font search saat tidak focus (tidak diklik) */
+.temaSearch-1{
+  color: var(--searchColor-1); 
+}
+
+/* warna placeholder search*/
+.temaSearch-1::placeholder{
+  color: var(--searchPlaceH-1);
+}
+
+/* warna icon search saat tidak focus (tidak diklik)*/
+.temaIconSearch-1 path{
+  fill: var(--searchIcon-1);
+}
+
+/* set saat div search dihover, dan class saat div search difocus */
+.mySearch-div:hover,
+.mySearch-divFocus{
+  background-color: #ffffff;
+}
+.mySearch-div:hover .myIcon-search path,
+.myIcon-searchFocus path{
+  fill: #000000;
+}
+.mySearch-div:hover .mySearch::placeholder,
+.mySearch-div:hover .mySearch,
+.placeholderFocus::placeholder,
+.mySearchFocus{
+  color: #000000;
+}
+
+/* --AKHIR SET SEARCH BAR-- */
+
+/* --SET TABLE-- */
+.myTable{
+  border-collapse: separate;
+  border-radius: 10px; 
+}
+
+/* warna border table */
+.temaTable-1{
+  border: 1px solid var(--borderColor-1); 
+}
+/* --AKHIR SET TABLE-- */
+
+/* --SET INPUT TODO-- */
+/* Form */
+.myForm{
+  width: 450px;
+}
+
+/* warna text input todo */
+.temaTodoInput-1,
+.temaTodoInput-1:focus{
+  color: var(--textColor-1); 
+}
+
+/* membuat background input transparan */
+.myBg-transparent,
+.myBg-transparent:focus{
+  background: transparent;
+  border: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+
+/* merubah warna bg svg saat div dihover*/
+.temaButton-1:hover svg{
+  background-color: var(--hoverButtonP-1);
+}
+
+/* merubah warna tulisan p saat div dihover*/
+.temaButton-1:hover p{
+  color: var(--hoverButtonP-1)
+}
+
+/* #tambahButton */
+.temaTambahButton-1{
+  background-color: var(--buttonP-1); 
+}
+
+.temaTambahButton-1:hover{
+  background-color: var(--hoverButtonP-1); 
+}
+
+/* #hideToggle */
+.temaCancelButton-1{
+  background-color: var(--buttonS-1); 
+}
+
+.temaCancelButton-1:hover{
+  background-color: var(--hoverButtonS-1); 
+}
+/* --AKHIR SET INPUT TODO-- */
+
+/* SET KONTEN LIST */
+.content {
+    padding: 10px;
+    margin: 80px;
+    width: 950px;
+    border-radius: 20px;
+    min-height: 60vh;
+}
+
+.myList{
+  width: 250px;
+}
+
+.myDoneButton{
+  width: 30px;
+  border-color: #000000;
+  background-color: transparent;
+}
+
+.tickIcon{
+  width: 17px;
+  height: 17px;
+  visibility: hidden;
+}
+
+.myDoneButton:hover .tickIcon{
+  visibility: visible;
+}
+
+#toggle{
+    display: none;
+}
+
+.myEmpty-image{
+  height: 380px;
+  width: 450px;
+}
+/* SET AKHIR KONTEN LIST */
+
+/* --SET (DIV) BUTTON ADD TODO LIST-- */
+.myButton {
+  cursor: pointer;
+}
+.myButton svg {
+  border-radius: 50%; /* merubah background dari svg menjadi bulat */
+}
+.myButton p{
+  display: inline;  /* membuat posisi p sejajar dengan svg */
+}
+.myButton:hover svg path{
+  fill: black;  /* merubah warna icon svg menjadi hitam saat dihover */
+}
+
+/* --AKHIR SET (DIV) BUTTON ADD TODO LIST-- */
+
+/* --MEMBUAT ANIMASI POP PADA LIST-- */
+.pop {
+  animation: right-drop 0.5s ease forwards;
+}
+
+@keyframes right-drop {
+  0% {
+    transform: translateX(-200px);
+  }
+  70% {
+    transform: translateX(50px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+/* --AKHIR MEMBUAT ANIMASI POP PADA LIST */
+
+/* Responsive */
+@media (max-width: 480px ){
+  .mySearch-div{
+    width: 350px;
+    margin-left: 5px;
+  }
+  .content {
+    padding: 2px;
+    margin: 80px;
+    width: 350px;
+  }
+  .myForm{
+    width: 350px;
+  }
+  .myEmpty-image{
+    height: 250px;
+    width: 300px;
+  }
+}
+@media (min-width: 481px) and (max-width: 768px ){
+  .mySearch-div{
+    width: 250px;
+    margin-left: 50px;
+  }
+  .content {
+    padding: 2px;
+    margin: 80px;
+    width: 450px;
+  }
+  .myForm{
+    width: 450px;
+  }
+  .myEmpty-image{
+    height: 320px;
+    width: 350px;
+  }
+}
+@media (min-width: 769px) and (max-width: 1024px ){
+  .mySearch-div{
+    width: 250px;
+    margin-left: 50px;
+  }
+  .content {
+    padding: 2px;
+    margin: 80px;
+    width: 450px;
+  }
+  .myForm{
+    width: 450px;
+  }
+  .myEmpty-image{
+    height: 320px;
+    width: 350px;
+  }
+}
+@media (min-width: 1025px) and (max-width: 1200px ){
+  .mySearch-div{
+    width: 250px;
+    margin-left: 80px;
+  }
+  .content {
+    padding: 2px;
+    margin: 80px;
+    width: 750px;
+  }
+  .myForm{
+    width: 450px;
+  }
+  .myEmpty-image{
+    height: 380px;
+    width: 450px;
+  }
+}
+
+/* Akhir Responsive */
