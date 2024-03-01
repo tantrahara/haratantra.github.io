@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Warungpedia</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+
+    <!-- import font -->
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/open-sauce-one" rel="stylesheet">
+
+    <!-- import splidejs -->
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
+
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="" class="nav-warungpedia">warungpedia</a>
+            <a href="" class="nav-kategori">Kategori</a>
+            <div class="nav-search">
+                <svg class="search-icon" id="searchSVG" width="1.5em" height="1.5em" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path fill="#8D96AA"
+                        d="m19.6 21l-6.3-6.3q-.75.6-1.725.95T9.5 16q-2.725 0-4.612-1.888T3 9.5q0-2.725 1.888-4.612T9.5 3q2.725 0 4.612 1.888T16 9.5q0 1.1-.35 2.075T14.7 13.3l6.3 6.3l-1.4 1.4ZM9.5 14q1.875 0 3.188-1.313T14 9.5q0-1.875-1.313-3.188T9.5 5Q7.625 5 6.312 6.313T5 9.5q0 1.875 1.313 3.188T9.5 14Z" />
+                </svg>
+                <input type="text" name="search" id="search" placeholder="Cari di Warungpedia" autocomplete="off"
+                    spellcheck="false" class="input-search">
+            </div>
+            <div class="nav-troli">
+                <svg class="troli-icon" xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em"
+                    viewBox="0 0 1024 1024">
+                    <path fill="#2E3137"
+                        d="M368 833c-13.3 0-24.5 4.5-33.5 13.5S321 866.7 321 880s4.5 24.5 13.5 33.5s20.2 13.8 33.5 14.5c13.3-.7 24.5-5.5 33.5-14.5S415 893.3 415 880s-4.5-24.5-13.5-33.5S381.3 833 368 833zm439-193c7.4 0 13.8-2.2 19.5-6.5S836 623.3 838 616l112-448c2-10-.2-19.2-6.5-27.5S929 128 919 128H96c-9.3 0-17 3-23 9s-9 13.7-9 23s3 17 9 23s13.7 9 23 9h96v576h672c9.3 0 17-3 23-9s9-13.7 9-23s-3-17-9-23s-13.7-9-23-9H256v-64h551zM256 192h622l-96 384H256V192zm432 641c-13.3 0-24.5 4.5-33.5 13.5S641 866.7 641 880s4.5 24.5 13.5 33.5s20.2 13.8 33.5 14.5c13.3-.7 24.5-5.5 33.5-14.5S735 893.3 735 880s-4.5-24.5-13.5-33.5S701.3 833 688 833z" />
+                </svg>
+            </div>
+            <div class="nav-bel">
+                <svg class="bel-icon" xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em"
+                    viewBox="0 0 20 20">
+                    <path fill="#2E3137"
+                        d="M9.985 0c1.089 0 1.971.898 1.971 2.006l-.009.163c.868.352 1.707.936 2.451 1.71c.862.893 1.366 2.077 1.521 3.596v5.478l1.191 2.098c.4.666.528 1.224.216 1.707c-.286.441-.797.595-1.49.583h-2.67C12.854 18.86 11.532 20 9.95 20c-1.584 0-2.905-1.14-3.216-2.658H3.778l-.056-.003c-.627-.054-1.094-.357-1.199-.94c-.071-.397.023-.823.268-1.331l1.225-2.18l.003-5.473c.107-1.21.56-2.337 1.348-3.371c.667-.875 1.62-1.519 2.654-1.89a1.752 1.752 0 0 1-.006-.148C8.015.898 8.897 0 9.985 0Zm1.818 17.342H8.097c.275.77 1 1.32 1.853 1.32c.852 0 1.578-.55 1.853-1.32ZM10.082 3.124c-1.354 0-2.843.645-3.677 1.74c-.638.836-.994 1.722-1.075 2.61v5.59c0 .117-.03.232-.087.333l-1.291 2.296a1.71 1.71 0 0 0-.12.311h12.014c.121.002.213-.003.276-.005a2.615 2.615 0 0 0-.141-.265l-1.287-2.267a.678.678 0 0 1-.088-.335l.003-5.586c-.121-1.162-.506-2.064-1.149-2.732c-1.04-1.08-2.262-1.69-3.378-1.69Zm-.097-1.787a.66.66 0 0 0-.635.497c.246-.031.49-.047.732-.047c.177 0 .356.01.535.032a.66.66 0 0 0-.632-.482Z" />
+                </svg>
+            </div>
+            <div class="nav-surat">
+                <svg class="surat-icon" xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em"
+                    viewBox="0 0 32 32">
+                    <path fill="none" stroke="#2E3137" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M29 9v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9m26 0a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2m26 0l-11.862 8.212a2 2 0 0 1-2.276 0L3 9" />
+                </svg>
+            </div>
+            <div class="nav-line">
+                <svg class="line-icon" xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1"
+                    viewBox="0 0 24 24" width="1.5em" height="1.5em">
+                    <rect x="1" width="1" height="24" fill="#BFC9D9" />
+                </svg>
+            </div>
+            <div class="nav-toko">
+                <svg class="toko-icon" xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em"
+                    viewBox="0 0 512 512">
+                    <path fill="#BFC9D9"
+                        d="M512 192q0-4-2-9L446 13q-4-13-19-13H85Q70 0 66 13L2 183q-2 5-2 9q0 34 21 51v226q-9 0-15 6t-6 16q0 9 6 15t15 6h470q9 0 15-6t6-15q0-10-6-16t-15-6V243q21-17 21-51zM171 469h-43V320h43v149zm277 0H213V299q0-22-21-22h-85q-22 0-22 22v170H64V254q13-3 23-13q18 15 41 15q26 0 43-17q15 17 42 17q26 0 43-17q17 17 43 17q27 0 42-17q17 17 43 17q23 0 41-15q10 10 23 13v215zm11-256q-11 0-11-21t-21-21q-22 0-22 21t-21 21t-21-21t-22-21q-21 0-21 21t-21 21q-22 0-22-21t-21-21t-21 21t-22 21q-21 0-21-21t-21-21q-22 0-22 21t-21 21t-21-21t-22-21q-21 0-21 21t-11 21q-7 0-10-17l57-153h312l57 153q-3 17-10 17zm-54 64H256q-21 0-21 22v106q0 22 21 22h149q22 0 22-22V299q0-22-22-22zm-21 107H277v-64h107v64z" />
+                </svg>
+                <label>Toko</label>
+            </div>
+            <div class="nav-profil">
+                <svg class="profil-icon" width="1.5em" height="1.5em" stroke-width="1.5" viewBox="0 0 24 24" fill="none"
+                    xmlns="http://www.w3.org/2000/svg" color="#878c8e">
+                    <path
+                        d="M12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2Z"
+                        stroke="#878c8e" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path
+                        d="M4.271 18.3457C4.271 18.3457 6.50002 15.5 12 15.5C17.5 15.5 19.7291 18.3457 19.7291 18.3457"
+                        stroke="#878c8e" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path
+                        d="M12 12C13.6569 12 15 10.6569 15 9C15 7.34315 13.6569 6 12 6C10.3431 6 9 7.34315 9 9C9 10.6569 10.3431 12 12 12Z"
+                        stroke="#878c8e" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+                <label>Profile</label>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <article class="carousel">
+            <section class="splide" aria-label="Splide Basic HTML Example">
+                <div class="splide__track">
+                    <ul class="splide__list">
+                        <li class="splide__slide"><img src="assets/ads1.jpg" alt=""></li>
+                        <li class="splide__slide"><img src="assets/ads2.jpg" alt=""></li>
+                        <li class="splide__slide"><img src="assets/ads3.jpg" alt=""></li>
+                    </ul>
+                </div>
+            </section>
+        </article>
+
+        <article class="produk">
+            <section class="selection-wrap">
+                <img src="assets/back.jpg" id="backBtn">
+                <div class="selection">
+                    <div>
+                        <span>For You</span>
+                        <span>Ramadan</span>
+                        <span>Beli lokal</span>
+                        <span>Obat Lainnya</span>
+                        <span>Krim Wajah</span>
+                        <span>Serum Wajah</span>
+                        <span>Mirip yang kamu cek</span>
+                    </div>
+                </div>
+                <img src="assets/next.jpg" id="nextBtn">
+            </section>
+            <section class="card-container">
+                <div class="card">
+                    <img src="assets/prod1.jpg" alt="">
+                    <div class="card-content">
+                        <p class="judul-content">Sepatu Sneakers Abu</p>
+                        <p class="harga-content">Rp99.000</p>
+                        <p class="alamat-content"><img src="assets/badge.jpg" alt="">Kota Bekasi</p>
+                        <p class="rating-content"><img src="assets/star.jpg" alt="">4.8 | 750+ terjual</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="assets/prod2.jpg" alt="">
+                    <div class="card-content">
+                        <p class="judul-content">Celana Olahraga</p>
+                        <p class="harga-content">Rp50.000</p>
+                        <p class="alamat-content">Surabaya</p>
+                        <p class="rating-content"><img src="assets/star.jpg" alt="">4.6 | 150+ terjual</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="assets/prod3.jpg" alt="">
+                    <div class="card-content">
+                        <p class="judul-content">Pakaian Olahraga</p>
+                        <p class="harga-content">Rp199.000</p>
+                        <p class="alamat-content">Bandung</p>
+                        <p class="rating-content"><img src="assets/star.jpg" alt="">4.5 | 50+ terjual</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="assets/prod4.jpg" alt="">
+                    <div class="card-content">
+                        <p class="judul-content">Krim penghilang rambut</p>
+                        <p class="harga-content">Rp25.000</p>
+                        <p class="alamat-content">Jakarta Barat</p>
+                        <p class="rating-content"><img src="assets/star.jpg" alt="">4.5 | 1rb+ terjual</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="assets/prod5.jpg" alt="">
+                    <div class="card-content">
+                        <p class="judul-content">Krim penghilang rambut</p>
+                        <p class="harga-content">Rp99.000</p>
+                        <p class="alamat-content">Jakarta Barat</p>
+                        <p class="rating-content"><img src="assets/star.jpg" alt="">4.5 | 1rb+ terjual</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="assets/prod6.jpg" alt="">
+                    <div class="card-content">
+                        <p class="judul-content">Atopiclair</p>
+                        <p class="harga-content">Rp199.000</p>
+                        <p class="alamat-content">Jakarta Selatan</p>
+                        <p class="rating-content"><img src="assets/star.jpg" alt="">4.9 | 1rb+ terjual</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="assets/prod7.jpg" alt="">
+                    <div class="card-content">
+                        <p class="judul-content">Celana Ankle Pants</p>
+                        <p class="harga-content">Rp99.000</p>
+                        <p class="alamat-content">Kab. Purbalingga</p>
+                        <p class="rating-content"><img src="assets/star.jpg" alt="">4.8 | 500+ terjual</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="assets/prod8.jpg" alt="">
+                    <div class="card-content">
+                        <p class="judul-content">UNIQLO ankle pants</p>
+                        <p class="harga-content">Rp248.000</p>
+                        <p class="alamat-content">Jakarta Selatan</p>
+                        <p class="rating-content"><img src="assets/star.jpg" alt="">4.9 | 23 terjual</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="assets/prod9.jpg" alt="">
+                    <div class="card-content">
+                        <p class="judul-content">Apple macbook air M1</p>
+                        <p class="harga-content">Rp11.499.000</p>
+                        <p class="alamat-content"><img src="assets/badge.jpg" alt="">Jakarta Pusat</p>
+                        <p class="rating-content"><img src="assets/star.jpg" alt="">5.0 | 250+ terjual</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="assets/prod10.jpg" alt="">
+                    <div class="card-content">
+                        <p class="judul-content">Iphone 15 128gb</p>
+                        <p class="harga-content">Rp12,8jt - Rp16,4jt</p>
+                        <p class="alamat-content"><img src="assets/badge.jpg" alt="">Jakarta Barat</p>
+                        <p class="rating-content"><img src="assets/star.jpg" alt="">5.0 | 250+ terjual</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="assets/prod11.jpg" alt="">
+                    <div class="card-content">
+                        <p class="judul-content">Playstation 5</p>
+                        <p class="harga-content">Rp8.199.000</p>
+                        <p class="alamat-content"><img src="assets/badge.jpg" alt="">Jakarta Pusat</p>
+                        <p class="rating-content"><img src="assets/star.jpg" alt="">5.0 | 4 terjual</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="assets/prod12.jpg" alt="">
+                    <div class="card-content">
+                        <p class="judul-content">Sepeda Motor Yamaha</p>
+                        <p class="harga-content">Rp22.399.000</p>
+                        <p class="alamat-content"><img src="assets/badge.jpg" alt="">Jakarta Timur</p>
+                        <p class="rating-content"><img src="assets/star.jpg" alt="">5.0 | 80+ terjual</p>
+                    </div>
+                </div>
+            </section>
+        </article>
+    </main>
+
+    <footer></footer>
+
+</body>
+
+</html>
