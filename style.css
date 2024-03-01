@@ -7,8 +7,18 @@
     background-color: rgb(240, 240, 240);
 }
 
+/* removing underline for a tags */
+.card-body a{
+    text-decoration: none;
+}
+
 section{
     padding-top: 5rem;
+}
+
+/* setting the height of project cards (used bootstrap before, it's not even) */
+.card{
+    height: 450px;
 }
 
 .card:hover{
